@@ -1,0 +1,217 @@
+//Overwrite theme bootstrap style to Mercadolibre style
+$primary:#3483Fa;
+$success: #FFE600;
+$dark:#333333;
+$secondary:#999999;
+$light:#EEEEEE;
+$info: #666666;
+
+// Importamos bootstrap manejo de grillas 
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Importamos la fuente 
+@font-face {
+    font-family: "Proxima Nova"; 
+    font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+    src: url("//db.onlinewebfonts.com/t/90b3680786db32f9b5c112d1537677db.eot"); 
+    src: url("//db.onlinewebfonts.com/t/90b3680786db32f9b5c112d1537677db.eot?#iefix") 
+    format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/90b3680786db32f9b5c112d1537677db.woff2") 
+    format("woff2"), 
+    url("//db.onlinewebfonts.com/t/90b3680786db32f9b5c112d1537677db.woff") 
+    format("woff"), 
+    url("//db.onlinewebfonts.com/t/90b3680786db32f9b5c112d1537677db.ttf") 
+    format("truetype"), 
+    url("//db.onlinewebfonts.com/t/90b3680786db32f9b5c112d1537677db.svg#Proxima Nova Lt") 
+    format("svg"); 
+}
+
+@font-face {
+    font-family: "Proxima Nova"; 
+    font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+    src: url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.eot"); 
+    src: url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.eot?#iefix") 
+    format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.woff2") 
+    format("woff2"), 
+    url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.woff") 
+    format("woff"), 
+    url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.ttf") 
+    format("truetype"), 
+    url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.svg#ProximaNW01-Reg") 
+    format("svg"); 
+}
+
+//Definimos el tamño de uso y la fuente.
+html, body {
+    height:100vh;
+    font-family: Proxima Nova, -apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}
+
+//definimos los diferentes estilos para que la maquetación se ajuste a los solicitado. 
+.card-header{ border: none;}
+
+.BreadCol{
+    color: #666666;
+    font-size: 16px;
+    line-height: normal;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    & > .container-fluid{
+        padding-left: 0px;
+    }
+}
+
+.line{  
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.card-body{
+    padding: 0px 1rem;
+    margin-bottom: 0px;
+}
+
+.shipping{
+    margin-left: 10px;
+    width: 18px;
+    display: inline-flex;
+}
+.prodHCol1{
+    & > .container-fluid{
+        padding-left: 0px;
+    }
+    & > .container-fluid > img{
+        text-align: left;
+    }
+}
+
+.prodHCol2{
+    padding-left: 0px;
+    & > .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    & * { border: none; }
+    & * > .input-group-prepend > .input-group-text{
+        border-radius: 0 3px 3px 0;
+        background-color: #EEEEEE;
+    }
+
+}
+
+.prodLCol1, .prodLCol2{
+    padding-right: 0px;
+}
+
+.prodLCol2, .prodLCol3{
+    padding-left: 0px;
+    display: flex;
+    & > .container-fluid{
+        padding-right: 0px;
+    }
+}
+
+.prodLCol2{
+    line-height: normal;
+    & > .container-fluid > .price{
+        font-size: 24px;
+        margin-top: 28px;
+        cursor: pointer;
+    }
+    & > .container-fluid > .info{
+        margin-top: 25px;
+        font-size: 18px;
+    }
+}
+
+.prodLCol3{
+    & > .container-fluid > .state{
+        font-size: 12px;
+        margin-top: 35px;
+    }
+}
+
+.prodLCol1{
+    padding-right: 0px;
+    height: 180px;
+    & > .container-fluid{ padding: 16px; }
+    & > .container-fluid, .container-fluid > img{
+        max-width: 100%;
+        cursor: pointer;
+        &{
+            height: calc(100%);
+        }
+    }
+}
+
+.prodCol1{
+    padding-right: 0px;
+    height:680px;
+    & > .container-fluid, & > .container-fluid > img{
+        max-width: 100%;
+        & {
+            height: calc(100%);
+        }
+    }
+}
+.prodCol2{
+    padding-left: 0px;
+    & > .container-fluid{
+        padding-right: 32px;
+        line-height: normal;
+    }
+    & > .container-fluid > .row > .condition{
+        margin-top: 31px;
+        font-size: 14px;
+    }
+    & > .container-fluid > .row > .title{
+        margin-top: 9px;
+        font-size: 24px;
+        font-weight:900;
+    }
+    & > .container-fluid > .row > .price{
+        margin-top: 16px;
+        font-size: 46px;
+        font-weight:900;
+    }
+    & > .container-fluid > .row > .button{
+        margin-top: 19px;
+        font-size: 46px;
+        font-weight:900;
+    }
+
+}
+.prodCol3{
+    & > .container-fluid{
+        padding-left: 0px;
+        padding-left: 32px;
+        line-height: normal;
+    }
+    & > .container-fluid > .row >.title{
+        margin-top: 26px;
+        font-size: 28px;
+        font-weight: 900;
+    }
+    & > .container-fluid > .row >.content{
+        margin-top: 20px;
+        font-size: 16px;
+        padding-right: 32px;
+        margin-bottom: 32px;
+        white-space: pre-wrap;
+    }
+}
+.prodCol2, .prodCol1{
+    display: flex;
+}
+
+.prodCol2, .prodCol1, .prodCol3, .prodLCol1, .prodLCol2, .prodLCol3{
+    & > .container-fluid{ background-color:white;}
+}
+
+.footer{
+    height: 5vh;
+}
